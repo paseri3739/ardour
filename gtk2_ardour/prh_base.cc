@@ -228,6 +228,9 @@ PianoRollHeaderBase::render (ArdourCanvas::Rect const & self, ArdourCanvas::Rect
 		origin_y -= 1;
 	}
 
+	/* Setup a cairo translation so that all drawing can be done using item
+	 * coordinate
+	 */
 	cr->translate (origin_x, origin_y);
 
 
@@ -238,9 +241,6 @@ PianoRollHeaderBase::render (ArdourCanvas::Rect const & self, ArdourCanvas::Rect
 	Gtkmm2ext::set_source_rgba (cr, white);
 	cr->fill();
 
-	/* Setup a cairo translation so that all drawing can be done using item
-	 * coordinate
-	 */
 
 	/* Now draw black/white rects for each note, following standard piano
 	   layout, but without a setback/offset for the black keys
