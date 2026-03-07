@@ -446,11 +446,11 @@ PianoRollHeaderBase::render_scroomer (Cairo::RefPtr<Cairo::Context> cr) const
 	cr->translate (x, y);
 
 	set_source_rgba (cr, c);
-	cr->move_to (1.f, scroomer_top);
-	cr->line_to (_scroomer_size - 1.f, scroomer_top);
-	cr->line_to (_scroomer_size - 1.f, scroomer_bottom);
-	cr->line_to (1.f, scroomer_bottom);
-	cr->line_to (1.f, scroomer_top);
+	cr->move_to (0, scroomer_top);
+	cr->line_to (_scroomer_size, scroomer_top);
+	cr->line_to (_scroomer_size, scroomer_bottom);
+	cr->line_to (0, scroomer_bottom);
+	cr->line_to (0, scroomer_top);
 	cr->fill();
 
 	if (entered) {
@@ -458,11 +458,11 @@ PianoRollHeaderBase::render_scroomer (Cairo::RefPtr<Cairo::Context> cr) const
 		c = HSV (save_color).lighter (0.9).color();
 		set_source_rgba (cr, c);
 		cr->set_line_width (4.);
-		cr->move_to (1.f, scroomer_top + 2.);
-		cr->line_to (_scroomer_size - 1.f, scroomer_top + 2.);
+		cr->move_to (0, scroomer_top + 2.);
+		cr->line_to (_scroomer_size, scroomer_top + 2.);
 		cr->stroke ();
-		cr->line_to (_scroomer_size - 1.f, scroomer_bottom - 2.);
-		cr->line_to (2.f, scroomer_bottom - 2.);
+		cr->line_to (_scroomer_size, scroomer_bottom - 2.);
+		cr->line_to (0, scroomer_bottom - 2.);
 		cr->stroke ();
 		cr->restore ();
 	}
