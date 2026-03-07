@@ -54,7 +54,6 @@ PianoRollHeaderBase::PianoRollHeaderBase (MidiViewBackground& bg)
 	, _adj (_midi_context.note_range_adjustment)
 	, _view (nullptr)
 	, _font_descript (UIConfiguration::instance().get_NormalFont())
-	, _font_descript_big_c (UIConfiguration::instance().get_NormalFont())
 	, _font_descript_midnam (UIConfiguration::instance().get_NormalFont())
 	, _highlighted_note (NO_MIDI_NOTE)
 	, _clicked_note (NO_MIDI_NOTE)
@@ -83,9 +82,6 @@ void
 PianoRollHeaderBase::alloc_layouts (Glib::RefPtr<Pango::Context> context)
 {
 	_layout = Pango::Layout::create (context);
-	_big_c_layout = Pango::Layout::create (context);
-	_font_descript_big_c.set_absolute_size (10.0 * Pango::SCALE);
-	_big_c_layout->set_font_description(_font_descript_big_c);
 	_midnam_layout = Pango::Layout::create (context);
 }
 
@@ -179,12 +175,6 @@ PianoRollHeaderBase::render (ArdourCanvas::Rect const & self, ArdourCanvas::Rect
 	double y2 = min (self.y1, (ArdourCanvas::Coord) _midi_context.contents_height());
 	double context_note_height = _midi_context.note_height();
 
-	//Reduce the frequency of Pango layout resizing
-	//if (int(_old_context_note_height) != int(context_note_height)) {
-	//Set Pango layout keyboard c's size
-	_font_descript.set_absolute_size (context_note_height * 0.5 * Pango::SCALE);
-	_layout->set_font_description(_font_descript);
-
 	//change mode of midnam display
 	if (context_note_height >= 8.0) {
 		_mini_map_display = false;
@@ -192,23 +182,17 @@ PianoRollHeaderBase::render (ArdourCanvas::Rect const & self, ArdourCanvas::Rect
 		_mini_map_display = true;
 	}
 
-	//Set Pango layout midnam size
-	_font_descript_midnam.set_absolute_size (max(8.0 * 0.7 * Pango::SCALE, (int)context_note_height * 0.7 * Pango::SCALE));
+	//Set Pango layout size
+	_font_descript_midnam.set_absolute_size (max(min((int)context_note_height * 0.8, 16.0), 10.0) * Pango::SCALE);
 
 	_midnam_layout->set_font_description(_font_descript_midnam);
+	_layout->set_font_description(_font_descript_midnam);
 
 	lowest = max(_midi_context.lowest_note(), _midi_context.y_to_note(y2));
 
 	if (lowest > 127) {
 		lowest = 0;
 	}
-
-	/* fill the entire rect with the color for non-highlighted white notes.
-	 * then we won't have to draw the background for those notes,
-	 * and would only have to draw the background for the one highlighted white note*/
-	//cr->rectangle(rect.x, rect.y, rect.width, rect.height);
-	//r->set_source_rgb(1, 0,0);
-	//cr->fill();
 
 	cr->set_line_width (1.0f);
 
@@ -246,66 +230,13 @@ PianoRollHeaderBase::render (ArdourCanvas::Rect const & self, ArdourCanvas::Rect
 
 	cr->translate (origin_x, origin_y);
 
-	// Render the MIDNAM text or its equivalent.  First, set up a clip
-	// region so that the text doesn't spill, regardless of its length.
 
-	cr->save ();
-	cr->rectangle (0,0,_scroomer_size, height ());
-	cr->clip();
-
-	if (show_scroomer()) {
-
-		/* Draw the actual text */
-
-		for (std::vector<int>::size_type n = 0; n < numbers.size(); ++n) {
-
-			int size_x, size_y;
-			int y = positions[n];
-			NoteName const & note (note_names[numbers[n]]);
-
-			_midnam_layout->set_text (note.name);
-
-			set_source_rgba (cr, textc);
-			cr->move_to (2.f, y);
-
-			if (!_mini_map_display) {
-				_midnam_layout->show_in_cairo_context (cr);
-			} else {
-				/* Too small for text, just show a thing rect where the
-				   text would have been.
-				*/
-				if (!note.from_midnam) {
-					set_source_rgba (cr, textc);
-				}
-				pango_layout_get_pixel_size (_midnam_layout->gobj (), &size_x, &size_y);
-				cr->rectangle (2.f, y + (context_note_height * 0.5), size_x, context_note_height * 0.2);
-				cr->fill ();
-			}
-		}
-
-		/* Add a gradient over the text, to act as a sort of "visual
-		   elision". This avoids using text elision with "..." which takes up too
-		   much space.
-		*/
-		Gtkmm2ext::Color bg = UIConfiguration::instance().color (X_("gtk_background"));
-		double r,g,b,a;
-		Gtkmm2ext::color_to_rgba(bg,r,g,b,a);
-		double fade_width = 30.;
-		auto gradient_ptr = Cairo::LinearGradient::create (_scroomer_size - fade_width, 0, _scroomer_size, 0);
-		gradient_ptr->add_color_stop_rgba (0,r,g,b,0);
-		gradient_ptr->add_color_stop_rgba (1,r,g,b,1);
-		cr->set_source (gradient_ptr);
-		cr->rectangle (_scroomer_size - fade_width, 0, fade_width, height ());
-		cr->fill();
-	}
-
-	/* Now draw the semi-transparent scroomer over the top */
-
-	render_scroomer (cr);
-
-	/* Done with clip region */
-
-	cr->restore();
+	/* fill the entire rect with the color for non-highlighted white notes.
+	 * then we won't have to draw the background for those notes,
+	 * and would only have to draw the background for the one highlighted white note*/
+	cr->rectangle(0, 0, width(), height());
+	Gtkmm2ext::set_source_rgba (cr, white);
+	cr->fill();
 
 	/* Setup a cairo translation so that all drawing can be done using item
 	 * coordinate
@@ -319,6 +250,7 @@ PianoRollHeaderBase::render (ArdourCanvas::Rect const & self, ArdourCanvas::Rect
 
 		int i = numbers[n];
 		int oct_rel = i % 12;
+		bool black_note = false;
 
 		switch (oct_rel) {
 		case 1:
@@ -326,6 +258,7 @@ PianoRollHeaderBase::render (ArdourCanvas::Rect const & self, ArdourCanvas::Rect
 		case 6:
 		case 8:
 		case 10:
+			black_note = true;
 			/* black note */
 			if (i == _highlighted_note) {
 				bg = black_highlight;
@@ -353,13 +286,14 @@ PianoRollHeaderBase::render (ArdourCanvas::Rect const & self, ArdourCanvas::Rect
 
 		}
 
-		Gtkmm2ext::set_source_rgba (cr, bg);
-
 		double x = _scroomer_size;
 		double y = positions[n];
 
-		cr->rectangle (x, y, kbd_width, heights[n]);
-		cr->fill ();
+		if (black_note || i == _highlighted_note) {
+			Gtkmm2ext::set_source_rgba (cr, bg);
+			cr->rectangle (0, y, black_note ? (show_scroomer() ? _scroomer_size : width() * 0.65) : width(), heights[n]);
+			cr->fill ();
+		}
 
 		if ((oct_rel == 4 || oct_rel == 11) && y > 0) {
 			/* draw black separators between B/C and E/F */
@@ -369,26 +303,83 @@ PianoRollHeaderBase::render (ArdourCanvas::Rect const & self, ArdourCanvas::Rect
 			   semantics used for MidiViewBackground's note lines,
 			   which are rects
 			*/
-			cr->move_to (x, y + 0.5);
-			cr->line_to (x + kbd_width, y + 0.5);
+			cr->move_to (0, y + 0.5);
+			cr->line_to (width(), y + 0.5);
 			cr->stroke ();
 		}
 	}
 
-	/* render the C<N> of the key, when key is too small to contain text we
-	   place the C<N> on the midnam scroomer area.
+	// Render the MIDNAM text or its equivalent.  First, set up a clip
+	// region so that the text doesn't spill, regardless of its length.
+
+	cr->save ();
+	cr->rectangle (0,0,_scroomer_size, height ());
+	cr->clip();
+
+	if (show_scroomer()) {
+
+		/* Draw the actual text */
+
+		for (std::vector<int>::size_type n = 0; n < numbers.size(); ++n) {
+
+			int size_x, size_y;
+			int y = positions[n];
+			NoteName const & note (note_names[numbers[n]]);
+			int oct_rel = numbers[n] % 12;
+			bool black_note = oct_rel == 1 || oct_rel == 3 || oct_rel == 6 || oct_rel == 8 || oct_rel == 10;
+
+			_midnam_layout->set_text (note.name);
+
+			set_source_rgba (cr, black_note ? textc : black);
+			pango_layout_get_pixel_size (_midnam_layout->gobj (), &size_x, &size_y);
+			cr->move_to (2.f, y +  min(context_note_height - size_y * 0.85, context_note_height / 2 - size_y / 2));
+
+			if (!_mini_map_display) {
+				_midnam_layout->show_in_cairo_context (cr);
+			} else {
+				/* Too small for text, just show a thing rect where the
+				   text would have been.
+				*/
+				cr->rectangle (2.f, y + (context_note_height * 0.5), size_x, context_note_height * 0.2);
+				cr->fill ();
+			}
+		}
+
+		/* Add a gradient over the text, to act as a sort of "visual
+		   elision". This avoids using text elision with "..." which takes up too
+		   much space.
+		*/
+		// Gtkmm2ext::Color bg = UIConfiguration::instance().color (X_("gtk_background"));
+		// double r,g,b,a;
+		// Gtkmm2ext::color_to_rgba(bg,r,g,b,a);
+		// double fade_width = 30.;
+		// auto gradient_ptr = Cairo::LinearGradient::create (_scroomer_size - fade_width, 0, _scroomer_size, 0);
+		// gradient_ptr->add_color_stop_rgba (0,r,g,b,0);
+		// gradient_ptr->add_color_stop_rgba (1,r,g,b,1);
+		// cr->set_source (gradient_ptr);
+		// cr->rectangle (_scroomer_size - fade_width, 0, fade_width, height ());
+		// cr->fill();
+	}
+
+	/* Done with clip region */
+
+	cr->restore();
+
+	/* Now draw the semi-transparent scroomer over the top */
+
+	render_scroomer (cr);
+
+	/* render the C<N> on the key
 
 	   we render an additional 5 notes below the lowest note displayed
 	   so that the top of the C is shown to maintain visual context
 	 */
 
-	int bc_height, c_height, ignore;
+	int c_width, c_height;
 
-	_big_c_layout->set_text ("C1");
 	_layout->set_text ("C1");
 
-	pango_layout_get_pixel_size (_big_c_layout->gobj(), &ignore, &bc_height);
-	pango_layout_get_pixel_size (_layout->gobj(), &ignore, &c_height);
+	pango_layout_get_pixel_size (_layout->gobj(), &c_width, &c_height);
 
 	for (std::vector<int>::size_type n = 0; n < numbers.size(); ++n) {
 
@@ -408,24 +399,20 @@ PianoRollHeaderBase::render (ArdourCanvas::Rect const & self, ArdourCanvas::Rect
 				str << 'G' << cn;
 			}
 
-			if (h > 12.){
-				/* Cn text shown in keys */
-				set_source_rgba (cr, black);
-				_layout->set_text (str.str());
-				cr->move_to (x, y);
-				_layout->show_in_cairo_context (cr);
-			} else {
-				/* Cn text shown to left of keys */
-				set_source_rgba (cr, textc);
-				_big_c_layout->set_text (str.str());
-				/* XXX magic number alert - negative offset to
-				 * get left of the keys
-				 */
-				cr->move_to (x - 18, y);
-				_big_c_layout->show_in_cairo_context (cr);
-			}
+			set_source_rgba (cr, black);
+			_layout->set_text (str.str());
+			// y-placement that works for all sizes is tricky: here we go from
+			// bottom aligned (small notes) to centered (big notes)
+			cr->move_to (width() - c_width - 1, y + min(context_note_height - c_height * 0.85, context_note_height / 2 - c_height / 2));
+			_layout->show_in_cairo_context (cr);
 		}
 	}
+
+	// draw a 1px black border on the left to wrap it up
+	cr->move_to(0.5, 0);
+	cr->line_to(0.5, height());
+	Gtkmm2ext::set_source_rgba (cr, black);
+	cr->stroke();
 
 	cr->restore ();
 }
