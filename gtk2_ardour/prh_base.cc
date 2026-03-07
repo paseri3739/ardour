@@ -646,6 +646,11 @@ PianoRollHeaderBase::motion_handler (GdkEventMotion* ev)
 
 	}
 
+	if (!_scroomer_drag && !in_scroomer) {
+		set_cursor (nullptr);
+		_scroomer_state = NONE;
+	}
+
 	_old_y = ev->y;
 
 	return true;
@@ -793,7 +798,8 @@ PianoRollHeaderBase::enter_handler (GdkEventCrossing* ev)
 		set_note_highlight (_midi_context.y_to_note (ev->y));
 	}
 
-	set_cursor (_midi_context.editing_context().cursors()->selector);
+	set_cursor (nullptr);
+	_scroomer_state = NONE;
 	entered = true;
 	redraw ();
 	return true;
