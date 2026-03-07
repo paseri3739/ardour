@@ -182,7 +182,7 @@ PianoRollHeaderBase::render (ArdourCanvas::Rect const & self, ArdourCanvas::Rect
 		_mini_map_display = true;
 	}
 
-	//Set Pango layout size
+	//Set Pango layout size (relative to note height but clamped)
 	_font_descript_midnam.set_absolute_size (max(min((int)context_note_height * 0.8, 16.0), 10.0) * Pango::SCALE);
 
 	_midnam_layout->set_font_description(_font_descript_midnam);
@@ -291,6 +291,7 @@ PianoRollHeaderBase::render (ArdourCanvas::Rect const & self, ArdourCanvas::Rect
 
 		if (black_note || i == _highlighted_note) {
 			Gtkmm2ext::set_source_rgba (cr, bg);
+			// TODO: declare black note width more clearly
 			cr->rectangle (0, y, black_note ? (show_scroomer() ? _scroomer_size : width() * 0.65) : width(), heights[n]);
 			cr->fill ();
 		}
@@ -332,6 +333,10 @@ PianoRollHeaderBase::render (ArdourCanvas::Rect const & self, ArdourCanvas::Rect
 
 			set_source_rgba (cr, black_note ? textc : black);
 			pango_layout_get_pixel_size (_midnam_layout->gobj (), &size_x, &size_y);
+			// TODO: make y-position computation understandable
+			// y-placement that works for all sizes is tricky since we limit the size
+			// to avoid huge note names: here we go from bottom aligned (small notes)
+			// to centered (big notes)
 			cr->move_to (2.f, y +  min(context_note_height - size_y * 0.85, context_note_height / 2 - size_y / 2));
 
 			if (!_mini_map_display) {
@@ -349,6 +354,7 @@ PianoRollHeaderBase::render (ArdourCanvas::Rect const & self, ArdourCanvas::Rect
 		   elision". This avoids using text elision with "..." which takes up too
 		   much space.
 		*/
+		// TODO: make it work with the black & white keys ?
 		// Gtkmm2ext::Color bg = UIConfiguration::instance().color (X_("gtk_background"));
 		// double r,g,b,a;
 		// Gtkmm2ext::color_to_rgba(bg,r,g,b,a);
@@ -401,8 +407,10 @@ PianoRollHeaderBase::render (ArdourCanvas::Rect const & self, ArdourCanvas::Rect
 
 			set_source_rgba (cr, black);
 			_layout->set_text (str.str());
-			// y-placement that works for all sizes is tricky: here we go from
-			// bottom aligned (small notes) to centered (big notes)
+			// TODO: make y-position computation understandable
+			// y-placement that works for all sizes is tricky since we limit the size
+			// to avoid huge note names: here we go from bottom aligned (small notes)
+			// to centered (big notes)
 			cr->move_to (width() - c_width - 1, y + min(context_note_height - c_height * 0.85, context_note_height / 2 - c_height / 2));
 			_layout->show_in_cairo_context (cr);
 		}
