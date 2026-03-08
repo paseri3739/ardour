@@ -138,12 +138,27 @@ PianoRollHeaderBase::scroll_handler (GdkEventScroll* ev)
 	int note_lower = _adj.get_value ();
 
 	if(ev->state == GDK_SHIFT_MASK){
+		int increment = 1;
+
 		switch (ev->direction) {
 		case GDK_SCROLL_UP: //ZOOM IN
-			_midi_context.apply_note_range (min(note_lower + 1, 127), max(note_lower + note_range - 1,0), true);
+			while (true) {
+				// apply_note_range may not change anything if the increment is too small
+				// we need to try increasing value until the range actually changes
+				// or the boundaries are reached
+				_midi_context.apply_note_range (min(note_lower + increment, 127), max(note_lower + note_range - 1,0), true);
+				increment++;
+				if (note_range != _adj.get_page_size ()) break;
+				if (note_range - increment * 2 <= 12) break;
+			}
 			break;
 		case GDK_SCROLL_DOWN: //ZOOM OUT
-			_midi_context.apply_note_range (max(note_lower - 1,0), min(note_lower + note_range + 1, 127), true);
+			while (true) {
+				_midi_context.apply_note_range (max(note_lower - increment, 0), min(note_lower + note_range + increment, 127), true);
+				increment++;
+				if (note_range != _adj.get_page_size ()) break;
+				if (note_range + increment * 2 > 127) break;
+			}
 			break;
 		default:
 			return false;
