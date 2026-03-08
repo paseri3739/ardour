@@ -1,5 +1,5 @@
 {
-  description = "A C++ project with SDL2 and other dependencies";
+  description = "Ardour dependencies";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
