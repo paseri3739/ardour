@@ -56,11 +56,6 @@
             fontconfig
             freetype
             aubio-custom
-            fluidsynth # external
-            hidapi # external
-            libltc # external
-            qm-dsp # external
-            kissfft # external
           ]
           ++ pkgs.lib.optionals pkgs.stdenv.isDarwin [
             pkgs.apple-sdk
@@ -121,7 +116,6 @@
           buildInputs = libraries;
           shellHook = ''
             export NIX_CFLAGS_COMPILE="$(pkg-config --cflags sratom-0) $NIX_CFLAGS_COMPILE"
-
             mkdir -p .pkgconfig
             ln -sf ${pkgs.hidapi}/lib/pkgconfig/hidapi.pc .pkgconfig/hidapi-hidraw.pc
             export PKG_CONFIG_PATH="$(pwd)/.pkgconfig:$PKG_CONFIG_PATH"
