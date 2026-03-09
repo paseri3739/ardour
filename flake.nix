@@ -17,8 +17,9 @@
       let
         pkgs = nixpkgs.legacyPackages.${system};
 
-        # ローカルのaubio.nixを評価してパッケージとして定義
+        # ローカルの定義ファイルを評価
         aubio-custom = pkgs.callPackage ./aubio.nix { };
+        vamp-custom = pkgs.callPackage ./vamp.nix { };
 
         libraries =
           with pkgs;
@@ -31,7 +32,7 @@
             libarchive
             liblo
             taglib
-            vamp-plugin-sdk
+            vamp-custom # 標準の vamp-plugin-sdk の代わりにカスタム版を使用
             rubberband
             libusb1
             jack2
@@ -65,10 +66,9 @@
             pkgs.apple-sdk
           ];
 
-        # ビルド定義の本体
         ardour-package = pkgs.stdenv.mkDerivation {
           pname = "ardour";
-          version = "8.x"; # 必要に応じて適切なバージョンに変更してください
+          version = "8.x";
 
           src = ./.; # カレントディレクトリのソースを使用
 
@@ -87,7 +87,6 @@
           CXXFLAGS = "-DDISABLE_VISIBILITY";
 
           # configureフェーズ
-          # prefix=$out を指定することで、ビルド結果が /nix/store/... にインストールされます
           configurePhase = ''
             python3 waf configure \
               --prefix=$out \
@@ -109,30 +108,20 @@
             python3 waf install
           '';
 
-          # RPATHの解決（Nixのビルドプロセスで自動的に行われますが、
-          # 特殊なライブラリパスが必要な場合に備えて設定を維持します）
-          preFixup = ''
-            # 必要に応じて install_name_tool やラッピング処理をここに記述
-          '';
         };
       in
       {
-        # nix build . で実行されるパッケージ
         packages.default = ardour-package;
 
-        # nix develop で提供される開発環境
         devShells.default = pkgs.mkShell {
           nativeBuildInputs = with pkgs; [
             pkg-config
-            llvmPackages.clang-tools
             python311
           ];
           buildInputs = libraries;
           shellHook = ''
-            # ビルド時にエラーが出るので補填する
             export NIX_CFLAGS_COMPILE="$(pkg-config --cflags sratom-0) $NIX_CFLAGS_COMPILE"
-            # macOS において hidapi-hidraw を要求される問題を、pkg-config のパスを偽装して解決する
-            # hidapi.pc を hidapi-hidraw.pc として参照できるようにシンボリックリンクを作成
+
             mkdir -p .pkgconfig
             ln -sf ${pkgs.hidapi}/lib/pkgconfig/hidapi.pc .pkgconfig/hidapi-hidraw.pc
             export PKG_CONFIG_PATH="$(pwd)/.pkgconfig:$PKG_CONFIG_PATH"
