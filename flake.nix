@@ -17,7 +17,7 @@
       let
         pkgs = nixpkgs.legacyPackages.${system};
 
-        # ローカルの定義ファイルを評価
+        # for macos, we need to use the custom versions of aubio and vamp plugins
         aubio-custom = pkgs.callPackage ./aubio.nix { };
         vamp-custom = pkgs.callPackage ./vamp.nix { };
 
@@ -32,7 +32,7 @@
             libarchive
             liblo
             taglib
-            vamp-custom # 標準の vamp-plugin-sdk の代わりにカスタム版を使用
+            vamp-custom
             rubberband
             libusb1
             jack2
@@ -65,7 +65,7 @@
           pname = "ardour";
           version = "8.x";
 
-          src = ./.; # カレントディレクトリのソースを使用
+          src = ./.;
 
           nativeBuildInputs = with pkgs; [
             pkg-config
@@ -77,11 +77,10 @@
 
           buildInputs = libraries;
 
-          # 環境変数の設定
+          # macOS needs these flags to disable symbol visibility
           CFLAGS = "-DDISABLE_VISIBILITY";
           CXXFLAGS = "-DDISABLE_VISIBILITY";
 
-          # configureフェーズ
           configurePhase = ''
             python3 waf configure \
               --prefix=$out \
@@ -93,12 +92,10 @@
               --keepflags
           '';
 
-          # buildフェーズ
           buildPhase = ''
             python3 waf
           '';
 
-          # installフェーズ
           installPhase = ''
             python3 waf install
           '';
@@ -116,9 +113,6 @@
           buildInputs = libraries;
           shellHook = ''
             export NIX_CFLAGS_COMPILE="$(pkg-config --cflags sratom-0) $NIX_CFLAGS_COMPILE"
-            mkdir -p .pkgconfig
-            ln -sf ${pkgs.hidapi}/lib/pkgconfig/hidapi.pc .pkgconfig/hidapi-hidraw.pc
-            export PKG_CONFIG_PATH="$(pwd)/.pkgconfig:$PKG_CONFIG_PATH"
           '';
         };
       }
