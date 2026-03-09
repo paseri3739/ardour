@@ -1,0 +1,1 @@
+/nix/store/ni1snpfhw4vd774bf8vyjwrca5dlh9y5-hidapi-0.15.0/lib/pkgconfig/hidapi.pc

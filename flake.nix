@@ -55,6 +55,11 @@
             fontconfig
             freetype
             aubio-custom
+            fluidsynth # external
+            hidapi # external
+            libltc # external
+            qm-dsp # external
+            kissfft # external
           ]
           ++ pkgs.lib.optionals pkgs.stdenv.isDarwin [
             pkgs.apple-sdk
@@ -124,15 +129,13 @@
           ];
           buildInputs = libraries;
           shellHook = ''
-            # 既存の設定
+            # ビルド時にエラーが出るので補填する
             export NIX_CFLAGS_COMPILE="$(pkg-config --cflags sratom-0) $NIX_CFLAGS_COMPILE"
-
-            # RPATHの追加
-            VAMP_LIB_PATH="${pkgs.vamp-plugin-sdk}/lib"
-            export LDFLAGS="-L$VAMP_LIB_PATH -Wl,-rpath,$VAMP_LIB_PATH $LDFLAGS"
-
-            # 他のライブラリも一括で対象にする
-            export LDFLAGS="-Wl,-rpath,${pkgs.lib.makeLibraryPath libraries} $LDFLAGS"
+            # macOS において hidapi-hidraw を要求される問題を、pkg-config のパスを偽装して解決する
+            # hidapi.pc を hidapi-hidraw.pc として参照できるようにシンボリックリンクを作成
+            mkdir -p .pkgconfig
+            ln -sf ${pkgs.hidapi}/lib/pkgconfig/hidapi.pc .pkgconfig/hidapi-hidraw.pc
+            export PKG_CONFIG_PATH="$(pwd)/.pkgconfig:$PKG_CONFIG_PATH"
           '';
         };
       }
