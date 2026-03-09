@@ -94,6 +94,7 @@
 
           buildPhase = ''
             python3 waf
+            python3 waf i18n
           '';
 
           installPhase = ''
