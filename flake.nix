@@ -111,6 +111,7 @@
             python311
           ];
           buildInputs = libraries;
+          # This is needed for the build system to find sratom's headers and libraries
           shellHook = ''
             export NIX_CFLAGS_COMPILE="$(pkg-config --cflags sratom-0) $NIX_CFLAGS_COMPILE"
           '';
