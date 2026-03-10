@@ -1,0 +1,1 @@
+CFLAGS="-DDISABLE_VISIBILITY" CXXFLAGS="-DDISABLE_VISIBILITY" ./waf configure --arm64 --strict --ptformat --libjack=weak --optimize --keepflags

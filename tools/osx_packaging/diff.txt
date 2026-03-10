@@ -1,0 +1,736 @@
+./
+Contents/
+Contents/CodeResources
+Contents/MacOS/
+Contents/MacOS/ardour9-lua
+Contents/Resources/
+Contents/Resources/export/
+Contents/Resources/icons/
+Contents/Resources/icons/cursor_square/
+Contents/Resources/icons/cursor_z/
+Contents/Resources/locale/
+Contents/Resources/locale/ca/
+Contents/Resources/locale/ca/LC_MESSAGES/
+Contents/Resources/locale/ca/LC_MESSAGES/gettext-runtime.mo
+Contents/Resources/locale/ca/LC_MESSAGES/gettext-tools.mo
+Contents/Resources/locale/ca/LC_MESSAGES/glib20.mo
+Contents/Resources/locale/cs/
+Contents/Resources/locale/cs/LC_MESSAGES/
+Contents/Resources/locale/cs/LC_MESSAGES/gettext-runtime.mo
+Contents/Resources/locale/cs/LC_MESSAGES/gettext-tools.mo
+Contents/Resources/locale/cs/LC_MESSAGES/glib20.mo
+Contents/Resources/locale/de/
+Contents/Resources/locale/de/LC_MESSAGES/
+Contents/Resources/locale/de/LC_MESSAGES/gettext-runtime.mo
+Contents/Resources/locale/de/LC_MESSAGES/gettext-tools.mo
+Contents/Resources/locale/de/LC_MESSAGES/glib20.mo
+Contents/Resources/locale/el/
+Contents/Resources/locale/el/LC_MESSAGES/
+Contents/Resources/locale/el/LC_MESSAGES/gettext-runtime.mo
+Contents/Resources/locale/el/LC_MESSAGES/gettext-tools.mo
+Contents/Resources/locale/el/LC_MESSAGES/glib20.mo
+Contents/Resources/locale/en_GB/
+Contents/Resources/locale/en_GB/LC_MESSAGES/
+Contents/Resources/locale/en_GB/LC_MESSAGES/glib20.mo
+Contents/Resources/locale/es/
+Contents/Resources/locale/es/LC_MESSAGES/
+Contents/Resources/locale/es/LC_MESSAGES/gettext-runtime.mo
+Contents/Resources/locale/es/LC_MESSAGES/gettext-tools.mo
+Contents/Resources/locale/es/LC_MESSAGES/glib20.mo
+Contents/Resources/locale/eu/
+Contents/Resources/locale/eu/LC_MESSAGES/
+Contents/Resources/locale/eu/LC_MESSAGES/gettext-tools.mo
+Contents/Resources/locale/eu/LC_MESSAGES/glib20.mo
+Contents/Resources/locale/fr/
+Contents/Resources/locale/fr/LC_MESSAGES/
+Contents/Resources/locale/fr/LC_MESSAGES/gettext-runtime.mo
+Contents/Resources/locale/fr/LC_MESSAGES/gettext-tools.mo
+Contents/Resources/locale/fr/LC_MESSAGES/glib20.mo
+Contents/Resources/locale/it/
+Contents/Resources/locale/it/LC_MESSAGES/
+Contents/Resources/locale/it/LC_MESSAGES/gettext-runtime.mo
+Contents/Resources/locale/it/LC_MESSAGES/gettext-tools.mo
+Contents/Resources/locale/it/LC_MESSAGES/glib20.mo
+Contents/Resources/locale/ja/
+Contents/Resources/locale/ja/LC_MESSAGES/
+Contents/Resources/locale/ja/LC_MESSAGES/gettext-runtime.mo
+Contents/Resources/locale/ja/LC_MESSAGES/gettext-tools.mo
+Contents/Resources/locale/ja/LC_MESSAGES/glib20.mo
+Contents/Resources/locale/ko/
+Contents/Resources/locale/ko/LC_MESSAGES/
+Contents/Resources/locale/ko/LC_MESSAGES/gettext-runtime.mo
+Contents/Resources/locale/ko/LC_MESSAGES/gettext-tools.mo
+Contents/Resources/locale/ko/LC_MESSAGES/glib20.mo
+Contents/Resources/locale/nn/
+Contents/Resources/locale/nn/LC_MESSAGES/
+Contents/Resources/locale/nn/LC_MESSAGES/gettext-runtime.mo
+Contents/Resources/locale/nn/LC_MESSAGES/gettext-tools.mo
+Contents/Resources/locale/nn/LC_MESSAGES/glib20.mo
+Contents/Resources/locale/pl/
+Contents/Resources/locale/pl/LC_MESSAGES/
+Contents/Resources/locale/pl/LC_MESSAGES/gettext-runtime.mo
+Contents/Resources/locale/pl/LC_MESSAGES/gettext-tools.mo
+Contents/Resources/locale/pl/LC_MESSAGES/glib20.mo
+Contents/Resources/locale/pt/
+Contents/Resources/locale/pt/LC_MESSAGES/
+Contents/Resources/locale/pt/LC_MESSAGES/gettext-runtime.mo
+Contents/Resources/locale/pt/LC_MESSAGES/gettext-tools.mo
+Contents/Resources/locale/pt/LC_MESSAGES/glib20.mo
+Contents/Resources/locale/pt_PT/
+Contents/Resources/locale/pt_PT/LC_MESSAGES/
+Contents/Resources/locale/ru/
+Contents/Resources/locale/ru/LC_MESSAGES/
+Contents/Resources/locale/ru/LC_MESSAGES/gettext-runtime.mo
+Contents/Resources/locale/ru/LC_MESSAGES/gettext-tools.mo
+Contents/Resources/locale/ru/LC_MESSAGES/glib20.mo
+Contents/Resources/locale/sv/
+Contents/Resources/locale/sv/LC_MESSAGES/
+Contents/Resources/locale/sv/LC_MESSAGES/gettext-runtime.mo
+Contents/Resources/locale/sv/LC_MESSAGES/gettext-tools.mo
+Contents/Resources/locale/sv/LC_MESSAGES/glib20.mo
+Contents/Resources/locale/zh/
+Contents/Resources/locale/zh/LC_MESSAGES/
+Contents/Resources/mcp/
+Contents/Resources/media/
+Contents/Resources/media/MIDI Beats/
+Contents/Resources/media/MIDI Beats/16beat1/
+Contents/Resources/media/MIDI Beats/16beat2/
+Contents/Resources/media/MIDI Beats/16beat3/
+Contents/Resources/media/MIDI Beats/16beatballad1/
+Contents/Resources/media/MIDI Beats/16beatballad2/
+Contents/Resources/media/MIDI Beats/16beatballad3/
+Contents/Resources/media/MIDI Beats/16shuffle1/
+Contents/Resources/media/MIDI Beats/16shuffle2/
+Contents/Resources/media/MIDI Beats/50srock/
+Contents/Resources/media/MIDI Beats/60spop/
+Contents/Resources/media/MIDI Beats/60srock/
+Contents/Resources/media/MIDI Beats/60ssoul/
+Contents/Resources/media/MIDI Beats/68ballad/
+Contents/Resources/media/MIDI Beats/68march/
+Contents/Resources/media/MIDI Beats/68swing/
+Contents/Resources/media/MIDI Beats/80spop/
+Contents/Resources/media/MIDI Beats/8beat/
+Contents/Resources/media/MIDI Beats/8beat1/
+Contents/Resources/media/MIDI Beats/8beat2/
+Contents/Resources/media/MIDI Beats/8beat3/
+Contents/Resources/media/MIDI Beats/8beatballad1/
+Contents/Resources/media/MIDI Beats/8beatballad2/
+Contents/Resources/media/MIDI Beats/8beatballad3/
+Contents/Resources/media/MIDI Beats/8beatdance/
+Contents/Resources/media/MIDI Beats/8beatmotown/
+Contents/Resources/media/MIDI Beats/8beatpop1/
+Contents/Resources/media/MIDI Beats/8beatpop2/
+Contents/Resources/media/MIDI Beats/8beatpop3/
+Contents/Resources/media/MIDI Beats/K50s_rock/
+Contents/Resources/media/MIDI Beats/Kfunk1/
+Contents/Resources/media/MIDI Beats/afro-cuban/
+Contents/Resources/media/MIDI Beats/afro/
+Contents/Resources/media/MIDI Beats/ambient/
+Contents/Resources/media/MIDI Beats/ambient1/
+Contents/Resources/media/MIDI Beats/ambient2/
+Contents/Resources/media/MIDI Beats/ambient3/
+Contents/Resources/media/MIDI Beats/bald/
+Contents/Resources/media/MIDI Beats/bald34/
+Contents/Resources/media/MIDI Beats/ballad/
+Contents/Resources/media/MIDI Beats/ballad128/
+Contents/Resources/media/MIDI Beats/ballad68/
+Contents/Resources/media/MIDI Beats/basicrock/
+Contents/Resources/media/MIDI Beats/beat16/
+Contents/Resources/media/MIDI Beats/beat8/
+Contents/Resources/media/MIDI Beats/bebop/
+Contents/Resources/media/MIDI Beats/beguine/
+Contents/Resources/media/MIDI Beats/bigband/
+Contents/Resources/media/MIDI Beats/bluegrass/
+Contents/Resources/media/MIDI Beats/blues/
+Contents/Resources/media/MIDI Beats/blues128/
+Contents/Resources/media/MIDI Beats/blues34/
+Contents/Resources/media/MIDI Beats/blues68/
+Contents/Resources/media/MIDI Beats/bolero/
+Contents/Resources/media/MIDI Beats/boneym/
+Contents/Resources/media/MIDI Beats/bossa/
+Contents/Resources/media/MIDI Beats/bossanova/
+Contents/Resources/media/MIDI Beats/broadway/
+Contents/Resources/media/MIDI Beats/broadwaywaltz/
+Contents/Resources/media/MIDI Beats/bubblerock/
+Contents/Resources/media/MIDI Beats/bvfunk/
+Contents/Resources/media/MIDI Beats/bwmarch/
+Contents/Resources/media/MIDI Beats/chacha/
+Contents/Resources/media/MIDI Beats/charleston/
+Contents/Resources/media/MIDI Beats/cntry/
+Contents/Resources/media/MIDI Beats/country/
+Contents/Resources/media/MIDI Beats/countryblues/
+Contents/Resources/media/MIDI Beats/countryswing/
+Contents/Resources/media/MIDI Beats/dance/
+Contents/Resources/media/MIDI Beats/dance1/
+Contents/Resources/media/MIDI Beats/dance2/
+Contents/Resources/media/MIDI Beats/dancepop1/
+Contents/Resources/media/MIDI Beats/dancepop2/
+Contents/Resources/media/MIDI Beats/dancepop3/
+Contents/Resources/media/MIDI Beats/descendingjazz/
+Contents/Resources/media/MIDI Beats/digitalrock/
+Contents/Resources/media/MIDI Beats/discosoul/
+Contents/Resources/media/MIDI Beats/dixie/
+Contents/Resources/media/MIDI Beats/dnb/
+Contents/Resources/media/MIDI Beats/dsoul/
+Contents/Resources/media/MIDI Beats/easyswing/
+Contents/Resources/media/MIDI Beats/electricpop/
+Contents/Resources/media/MIDI Beats/ending/
+Contents/Resources/media/MIDI Beats/fastbigband/
+Contents/Resources/media/MIDI Beats/fastblues/
+Contents/Resources/media/MIDI Beats/fastjazzwaltz/
+Contents/Resources/media/MIDI Beats/fastswing/
+Contents/Resources/media/MIDI Beats/fasttwist/
+Contents/Resources/media/MIDI Beats/fastwaltz/
+Contents/Resources/media/MIDI Beats/folkrock/
+Contents/Resources/media/MIDI Beats/foxtrot/
+Contents/Resources/media/MIDI Beats/funk/
+Contents/Resources/media/MIDI Beats/funk1/
+Contents/Resources/media/MIDI Beats/funk2/
+Contents/Resources/media/MIDI Beats/fus16/
+Contents/Resources/media/MIDI Beats/fusion/
+Contents/Resources/media/MIDI Beats/germanmarch/
+Contents/Resources/media/MIDI Beats/happyshuffle/
+Contents/Resources/media/MIDI Beats/heavymetal/
+Contents/Resources/media/MIDI Beats/highfive/
+Contents/Resources/media/MIDI Beats/hillcountry/
+Contents/Resources/media/MIDI Beats/hip-hop/
+Contents/Resources/media/MIDI Beats/hiphop/
+Contents/Resources/media/MIDI Beats/house/
+Contents/Resources/media/MIDI Beats/hrk/
+Contents/Resources/media/MIDI Beats/intro/
+Contents/Resources/media/MIDI Beats/jazz-54/
+Contents/Resources/media/MIDI Beats/jazz/
+Contents/Resources/media/MIDI Beats/jazz04/
+Contents/Resources/media/MIDI Beats/jazzGrtrio/
+Contents/Resources/media/MIDI Beats/jazzbasie/
+Contents/Resources/media/MIDI Beats/jazzbossa/
+Contents/Resources/media/MIDI Beats/jazzbouncy/
+Contents/Resources/media/MIDI Beats/jazzcombo/
+Contents/Resources/media/MIDI Beats/jazzcountry/
+Contents/Resources/media/MIDI Beats/jazzrhumba/
+Contents/Resources/media/MIDI Beats/jazzswing/
+Contents/Resources/media/MIDI Beats/jazztrio/
+Contents/Resources/media/MIDI Beats/jazzwaltz/
+Contents/Resources/media/MIDI Beats/jive/
+Contents/Resources/media/MIDI Beats/kbossa/
+Contents/Resources/media/MIDI Beats/kwestballad/
+Contents/Resources/media/MIDI Beats/latin/
+Contents/Resources/media/MIDI Beats/latinfusion/
+Contents/Resources/media/MIDI Beats/latinhouse/
+Contents/Resources/media/MIDI Beats/lfusion/
+Contents/Resources/media/MIDI Beats/lighttango/
+Contents/Resources/media/MIDI Beats/mambo/
+Contents/Resources/media/MIDI Beats/march1/
+Contents/Resources/media/MIDI Beats/mellowrb/
+Contents/Resources/media/MIDI Beats/metal1/
+Contents/Resources/media/MIDI Beats/metal2/
+Contents/Resources/media/MIDI Beats/middlebigband/
+Contents/Resources/media/MIDI Beats/mide/
+Contents/Resources/media/MIDI Beats/modernjazz/
+Contents/Resources/media/MIDI Beats/modernjazzwaltz/
+Contents/Resources/media/MIDI Beats/modernrb/
+Contents/Resources/media/MIDI Beats/mtl/
+Contents/Resources/media/MIDI Beats/nitejazz/
+Contents/Resources/media/MIDI Beats/oldieballad/
+Contents/Resources/media/MIDI Beats/polka/
+Contents/Resources/media/MIDI Beats/polkafox/
+Contents/Resources/media/MIDI Beats/pop/
+Contents/Resources/media/MIDI Beats/popballad/
+Contents/Resources/media/MIDI Beats/poppolka/
+Contents/Resources/media/MIDI Beats/poprock1/
+Contents/Resources/media/MIDI Beats/poprock2/
+Contents/Resources/media/MIDI Beats/popshuffle1/
+Contents/Resources/media/MIDI Beats/popshuffle2/
+Contents/Resources/media/MIDI Beats/popwaltz/
+Contents/Resources/media/MIDI Beats/punk/
+Contents/Resources/media/MIDI Beats/quickstep/
+Contents/Resources/media/MIDI Beats/r+b/
+Contents/Resources/media/MIDI Beats/rave/
+Contents/Resources/media/MIDI Beats/rb-ballad/
+Contents/Resources/media/MIDI Beats/rb/
+Contents/Resources/media/MIDI Beats/reggae/
+Contents/Resources/media/MIDI Beats/rhumba/
+Contents/Resources/media/MIDI Beats/rnb/
+Contents/Resources/media/MIDI Beats/rock-128/
+Contents/Resources/media/MIDI Beats/rock/
+Contents/Resources/media/MIDI Beats/rock1/
+Contents/Resources/media/MIDI Beats/rock2/
+Contents/Resources/media/MIDI Beats/rock34/
+Contents/Resources/media/MIDI Beats/rockballad/
+Contents/Resources/media/MIDI Beats/salsa1/
+Contents/Resources/media/MIDI Beats/salsa2/
+Contents/Resources/media/MIDI Beats/samba/
+Contents/Resources/media/MIDI Beats/shuffle/
+Contents/Resources/media/MIDI Beats/shuffleboggie/
+Contents/Resources/media/MIDI Beats/shuffleboogie/
+Contents/Resources/media/MIDI Beats/shufflerock/
+Contents/Resources/media/MIDI Beats/ska/
+Contents/Resources/media/MIDI Beats/slow16beat/
+Contents/Resources/media/MIDI Beats/slowbigband/
+Contents/Resources/media/MIDI Beats/slowbolero/
+Contents/Resources/media/MIDI Beats/slowbroadway/
+Contents/Resources/media/MIDI Beats/slowrock/
+Contents/Resources/media/MIDI Beats/slowswing/
+Contents/Resources/media/MIDI Beats/softrock/
+Contents/Resources/media/MIDI Beats/soul/
+Contents/Resources/media/MIDI Beats/soulpop/
+Contents/Resources/media/MIDI Beats/spiritual/
+Contents/Resources/media/MIDI Beats/strut/
+Contents/Resources/media/MIDI Beats/swing/
+Contents/Resources/media/MIDI Beats/tango/
+Contents/Resources/media/MIDI Beats/teamtechno/
+Contents/Resources/media/MIDI Beats/techno/
+Contents/Resources/media/MIDI Beats/thr/
+Contents/Resources/media/MIDI Beats/trance/
+Contents/Resources/media/MIDI Beats/trance1/
+Contents/Resources/media/MIDI Beats/trance2/
+Contents/Resources/media/MIDI Beats/trip/
+Contents/Resources/media/MIDI Beats/triphop/
+Contents/Resources/media/MIDI Beats/twi/
+Contents/Resources/media/MIDI Beats/twist/
+Contents/Resources/media/MIDI Beats/vienesewaltz/
+Contents/Resources/media/MIDI Beats/w-rock/
+Contents/Resources/media/MIDI Beats/western/
+Contents/Resources/media/MIDI Beats/westernswing/
+Contents/Resources/media/MIDI Beats/worldpop/
+Contents/Resources/media/MIDI Beats/zydeco/
+Contents/Resources/media/MIDI Chords/
+Contents/Resources/media/MIDI Chords/01 - C Major - A minor/
+Contents/Resources/media/MIDI Chords/01 - C Major - A minor/1 Triad/
+Contents/Resources/media/MIDI Chords/01 - C Major - A minor/1 Triad/Major/
+Contents/Resources/media/MIDI Chords/01 - C Major - A minor/1 Triad/Minor/
+Contents/Resources/media/MIDI Chords/01 - C Major - A minor/2 7th and 9th/
+Contents/Resources/media/MIDI Chords/01 - C Major - A minor/2 7th and 9th/Major/
+Contents/Resources/media/MIDI Chords/01 - C Major - A minor/2 7th and 9th/Minor/
+Contents/Resources/media/MIDI Chords/01 - C Major - A minor/3 All chords/
+Contents/Resources/media/MIDI Chords/01 - C Major - A minor/4 Progression/
+Contents/Resources/media/MIDI Chords/01 - C Major - A minor/4 Progression/Major/
+Contents/Resources/media/MIDI Chords/01 - C Major - A minor/4 Progression/Major/alt4 style/
+Contents/Resources/media/MIDI Chords/01 - C Major - A minor/4 Progression/Major/basic4 style/
+Contents/Resources/media/MIDI Chords/01 - C Major - A minor/4 Progression/Major/hiphop style/
+Contents/Resources/media/MIDI Chords/01 - C Major - A minor/4 Progression/Minor/
+Contents/Resources/media/MIDI Chords/01 - C Major - A minor/4 Progression/Minor/alt4 style/
+Contents/Resources/media/MIDI Chords/01 - C Major - A minor/4 Progression/Minor/basic4 style/
+Contents/Resources/media/MIDI Chords/01 - C Major - A minor/4 Progression/Minor/hiphop style/
+Contents/Resources/media/MIDI Chords/02 - Db Major - Bb minor/
+Contents/Resources/media/MIDI Chords/02 - Db Major - Bb minor/1 Triad/
+Contents/Resources/media/MIDI Chords/02 - Db Major - Bb minor/1 Triad/Major/
+Contents/Resources/media/MIDI Chords/02 - Db Major - Bb minor/1 Triad/Minor/
+Contents/Resources/media/MIDI Chords/02 - Db Major - Bb minor/2 7th and 9th/
+Contents/Resources/media/MIDI Chords/02 - Db Major - Bb minor/2 7th and 9th/Major/
+Contents/Resources/media/MIDI Chords/02 - Db Major - Bb minor/2 7th and 9th/Minor/
+Contents/Resources/media/MIDI Chords/02 - Db Major - Bb minor/3 All chords/
+Contents/Resources/media/MIDI Chords/02 - Db Major - Bb minor/4 Progression/
+Contents/Resources/media/MIDI Chords/02 - Db Major - Bb minor/4 Progression/Major/
+Contents/Resources/media/MIDI Chords/02 - Db Major - Bb minor/4 Progression/Major/alt4 style/
+Contents/Resources/media/MIDI Chords/02 - Db Major - Bb minor/4 Progression/Major/basic4 style/
+Contents/Resources/media/MIDI Chords/02 - Db Major - Bb minor/4 Progression/Major/hiphop style/
+Contents/Resources/media/MIDI Chords/02 - Db Major - Bb minor/4 Progression/Minor/
+Contents/Resources/media/MIDI Chords/02 - Db Major - Bb minor/4 Progression/Minor/alt4 style/
+Contents/Resources/media/MIDI Chords/02 - Db Major - Bb minor/4 Progression/Minor/basic4 style/
+Contents/Resources/media/MIDI Chords/02 - Db Major - Bb minor/4 Progression/Minor/hiphop style/
+Contents/Resources/media/MIDI Chords/03 - D Major - B minor/
+Contents/Resources/media/MIDI Chords/03 - D Major - B minor/1 Triad/
+Contents/Resources/media/MIDI Chords/03 - D Major - B minor/1 Triad/Major/
+Contents/Resources/media/MIDI Chords/03 - D Major - B minor/1 Triad/Minor/
+Contents/Resources/media/MIDI Chords/03 - D Major - B minor/2 7th and 9th/
+Contents/Resources/media/MIDI Chords/03 - D Major - B minor/2 7th and 9th/Major/
+Contents/Resources/media/MIDI Chords/03 - D Major - B minor/2 7th and 9th/Minor/
+Contents/Resources/media/MIDI Chords/03 - D Major - B minor/3 All chords/
+Contents/Resources/media/MIDI Chords/03 - D Major - B minor/4 Progression/
+Contents/Resources/media/MIDI Chords/03 - D Major - B minor/4 Progression/Major/
+Contents/Resources/media/MIDI Chords/03 - D Major - B minor/4 Progression/Major/alt4 style/
+Contents/Resources/media/MIDI Chords/03 - D Major - B minor/4 Progression/Major/basic4 style/
+Contents/Resources/media/MIDI Chords/03 - D Major - B minor/4 Progression/Major/hiphop style/
+Contents/Resources/media/MIDI Chords/03 - D Major - B minor/4 Progression/Minor/
+Contents/Resources/media/MIDI Chords/03 - D Major - B minor/4 Progression/Minor/alt4 style/
+Contents/Resources/media/MIDI Chords/03 - D Major - B minor/4 Progression/Minor/basic4 style/
+Contents/Resources/media/MIDI Chords/03 - D Major - B minor/4 Progression/Minor/hiphop style/
+Contents/Resources/media/MIDI Chords/04 - Eb Major - C minor/
+Contents/Resources/media/MIDI Chords/04 - Eb Major - C minor/1 Triad/
+Contents/Resources/media/MIDI Chords/04 - Eb Major - C minor/1 Triad/Major/
+Contents/Resources/media/MIDI Chords/04 - Eb Major - C minor/1 Triad/Minor/
+Contents/Resources/media/MIDI Chords/04 - Eb Major - C minor/2 7th and 9th/
+Contents/Resources/media/MIDI Chords/04 - Eb Major - C minor/2 7th and 9th/Major/
+Contents/Resources/media/MIDI Chords/04 - Eb Major - C minor/2 7th and 9th/Minor/
+Contents/Resources/media/MIDI Chords/04 - Eb Major - C minor/3 All chords/
+Contents/Resources/media/MIDI Chords/04 - Eb Major - C minor/4 Progression/
+Contents/Resources/media/MIDI Chords/04 - Eb Major - C minor/4 Progression/Major/
+Contents/Resources/media/MIDI Chords/04 - Eb Major - C minor/4 Progression/Major/alt4 style/
+Contents/Resources/media/MIDI Chords/04 - Eb Major - C minor/4 Progression/Major/basic4 style/
+Contents/Resources/media/MIDI Chords/04 - Eb Major - C minor/4 Progression/Major/hiphop style/
+Contents/Resources/media/MIDI Chords/04 - Eb Major - C minor/4 Progression/Minor/
+Contents/Resources/media/MIDI Chords/04 - Eb Major - C minor/4 Progression/Minor/alt4 style/
+Contents/Resources/media/MIDI Chords/04 - Eb Major - C minor/4 Progression/Minor/basic4 style/
+Contents/Resources/media/MIDI Chords/04 - Eb Major - C minor/4 Progression/Minor/hiphop style/
+Contents/Resources/media/MIDI Chords/05 - E Major - C# minor/
+Contents/Resources/media/MIDI Chords/05 - E Major - C# minor/1 Triad/
+Contents/Resources/media/MIDI Chords/05 - E Major - C# minor/1 Triad/Major/
+Contents/Resources/media/MIDI Chords/05 - E Major - C# minor/1 Triad/Minor/
+Contents/Resources/media/MIDI Chords/05 - E Major - C# minor/2 7th and 9th/
+Contents/Resources/media/MIDI Chords/05 - E Major - C# minor/2 7th and 9th/Major/
+Contents/Resources/media/MIDI Chords/05 - E Major - C# minor/2 7th and 9th/Minor/
+Contents/Resources/media/MIDI Chords/05 - E Major - C# minor/3 All chords/
+Contents/Resources/media/MIDI Chords/05 - E Major - C# minor/4 Progression/
+Contents/Resources/media/MIDI Chords/05 - E Major - C# minor/4 Progression/Major/
+Contents/Resources/media/MIDI Chords/05 - E Major - C# minor/4 Progression/Major/alt4 style/
+Contents/Resources/media/MIDI Chords/05 - E Major - C# minor/4 Progression/Major/basic4 style/
+Contents/Resources/media/MIDI Chords/05 - E Major - C# minor/4 Progression/Major/hiphop style/
+Contents/Resources/media/MIDI Chords/05 - E Major - C# minor/4 Progression/Minor/
+Contents/Resources/media/MIDI Chords/05 - E Major - C# minor/4 Progression/Minor/alt4 style/
+Contents/Resources/media/MIDI Chords/05 - E Major - C# minor/4 Progression/Minor/basic4 style/
+Contents/Resources/media/MIDI Chords/05 - E Major - C# minor/4 Progression/Minor/hiphop style/
+Contents/Resources/media/MIDI Chords/06 - F Major - D minor/
+Contents/Resources/media/MIDI Chords/06 - F Major - D minor/1 Triad/
+Contents/Resources/media/MIDI Chords/06 - F Major - D minor/1 Triad/Major/
+Contents/Resources/media/MIDI Chords/06 - F Major - D minor/1 Triad/Minor/
+Contents/Resources/media/MIDI Chords/06 - F Major - D minor/2 7th and 9th/
+Contents/Resources/media/MIDI Chords/06 - F Major - D minor/2 7th and 9th/Major/
+Contents/Resources/media/MIDI Chords/06 - F Major - D minor/2 7th and 9th/Minor/
+Contents/Resources/media/MIDI Chords/06 - F Major - D minor/3 All chords/
+Contents/Resources/media/MIDI Chords/06 - F Major - D minor/4 Progression/
+Contents/Resources/media/MIDI Chords/06 - F Major - D minor/4 Progression/Major/
+Contents/Resources/media/MIDI Chords/06 - F Major - D minor/4 Progression/Major/alt4 style/
+Contents/Resources/media/MIDI Chords/06 - F Major - D minor/4 Progression/Major/basic4 style/
+Contents/Resources/media/MIDI Chords/06 - F Major - D minor/4 Progression/Major/hiphop style/
+Contents/Resources/media/MIDI Chords/06 - F Major - D minor/4 Progression/Minor/
+Contents/Resources/media/MIDI Chords/06 - F Major - D minor/4 Progression/Minor/alt4 style/
+Contents/Resources/media/MIDI Chords/06 - F Major - D minor/4 Progression/Minor/basic4 style/
+Contents/Resources/media/MIDI Chords/06 - F Major - D minor/4 Progression/Minor/hiphop style/
+Contents/Resources/media/MIDI Chords/07 - Gb Major - Eb minor/
+Contents/Resources/media/MIDI Chords/07 - Gb Major - Eb minor/1 Triad/
+Contents/Resources/media/MIDI Chords/07 - Gb Major - Eb minor/1 Triad/Major/
+Contents/Resources/media/MIDI Chords/07 - Gb Major - Eb minor/1 Triad/Minor/
+Contents/Resources/media/MIDI Chords/07 - Gb Major - Eb minor/2 7th and 9th/
+Contents/Resources/media/MIDI Chords/07 - Gb Major - Eb minor/2 7th and 9th/Major/
+Contents/Resources/media/MIDI Chords/07 - Gb Major - Eb minor/2 7th and 9th/Minor/
+Contents/Resources/media/MIDI Chords/07 - Gb Major - Eb minor/3 All chords/
+Contents/Resources/media/MIDI Chords/07 - Gb Major - Eb minor/4 Progression/
+Contents/Resources/media/MIDI Chords/07 - Gb Major - Eb minor/4 Progression/Major/
+Contents/Resources/media/MIDI Chords/07 - Gb Major - Eb minor/4 Progression/Major/alt4 style/
+Contents/Resources/media/MIDI Chords/07 - Gb Major - Eb minor/4 Progression/Major/basic4 style/
+Contents/Resources/media/MIDI Chords/07 - Gb Major - Eb minor/4 Progression/Major/hiphop style/
+Contents/Resources/media/MIDI Chords/07 - Gb Major - Eb minor/4 Progression/Minor/
+Contents/Resources/media/MIDI Chords/07 - Gb Major - Eb minor/4 Progression/Minor/alt4 style/
+Contents/Resources/media/MIDI Chords/07 - Gb Major - Eb minor/4 Progression/Minor/basic4 style/
+Contents/Resources/media/MIDI Chords/07 - Gb Major - Eb minor/4 Progression/Minor/hiphop style/
+Contents/Resources/media/MIDI Chords/08 - G Major - E minor/
+Contents/Resources/media/MIDI Chords/08 - G Major - E minor/1 Triad/
+Contents/Resources/media/MIDI Chords/08 - G Major - E minor/1 Triad/Major/
+Contents/Resources/media/MIDI Chords/08 - G Major - E minor/1 Triad/Minor/
+Contents/Resources/media/MIDI Chords/08 - G Major - E minor/2 7th and 9th/
+Contents/Resources/media/MIDI Chords/08 - G Major - E minor/2 7th and 9th/Major/
+Contents/Resources/media/MIDI Chords/08 - G Major - E minor/2 7th and 9th/Minor/
+Contents/Resources/media/MIDI Chords/08 - G Major - E minor/3 All chords/
+Contents/Resources/media/MIDI Chords/08 - G Major - E minor/4 Progression/
+Contents/Resources/media/MIDI Chords/08 - G Major - E minor/4 Progression/Major/
+Contents/Resources/media/MIDI Chords/08 - G Major - E minor/4 Progression/Major/alt4 style/
+Contents/Resources/media/MIDI Chords/08 - G Major - E minor/4 Progression/Major/basic4 style/
+Contents/Resources/media/MIDI Chords/08 - G Major - E minor/4 Progression/Major/hiphop style/
+Contents/Resources/media/MIDI Chords/08 - G Major - E minor/4 Progression/Minor/
+Contents/Resources/media/MIDI Chords/08 - G Major - E minor/4 Progression/Minor/alt4 style/
+Contents/Resources/media/MIDI Chords/08 - G Major - E minor/4 Progression/Minor/basic4 style/
+Contents/Resources/media/MIDI Chords/08 - G Major - E minor/4 Progression/Minor/hiphop style/
+Contents/Resources/media/MIDI Chords/09 - Ab Major - F minor/
+Contents/Resources/media/MIDI Chords/09 - Ab Major - F minor/1 Triad/
+Contents/Resources/media/MIDI Chords/09 - Ab Major - F minor/1 Triad/Major/
+Contents/Resources/media/MIDI Chords/09 - Ab Major - F minor/1 Triad/Minor/
+Contents/Resources/media/MIDI Chords/09 - Ab Major - F minor/2 7th and 9th/
+Contents/Resources/media/MIDI Chords/09 - Ab Major - F minor/2 7th and 9th/Major/
+Contents/Resources/media/MIDI Chords/09 - Ab Major - F minor/2 7th and 9th/Minor/
+Contents/Resources/media/MIDI Chords/09 - Ab Major - F minor/3 All chords/
+Contents/Resources/media/MIDI Chords/09 - Ab Major - F minor/4 Progression/
+Contents/Resources/media/MIDI Chords/09 - Ab Major - F minor/4 Progression/Major/
+Contents/Resources/media/MIDI Chords/09 - Ab Major - F minor/4 Progression/Major/alt4 style/
+Contents/Resources/media/MIDI Chords/09 - Ab Major - F minor/4 Progression/Major/basic4 style/
+Contents/Resources/media/MIDI Chords/09 - Ab Major - F minor/4 Progression/Major/hiphop style/
+Contents/Resources/media/MIDI Chords/09 - Ab Major - F minor/4 Progression/Minor/
+Contents/Resources/media/MIDI Chords/09 - Ab Major - F minor/4 Progression/Minor/alt4 style/
+Contents/Resources/media/MIDI Chords/09 - Ab Major - F minor/4 Progression/Minor/basic4 style/
+Contents/Resources/media/MIDI Chords/09 - Ab Major - F minor/4 Progression/Minor/hiphop style/
+Contents/Resources/media/MIDI Chords/10 - A Major - F# minor/
+Contents/Resources/media/MIDI Chords/10 - A Major - F# minor/1 Triad/
+Contents/Resources/media/MIDI Chords/10 - A Major - F# minor/1 Triad/Major/
+Contents/Resources/media/MIDI Chords/10 - A Major - F# minor/1 Triad/Minor/
+Contents/Resources/media/MIDI Chords/10 - A Major - F# minor/2 7th and 9th/
+Contents/Resources/media/MIDI Chords/10 - A Major - F# minor/2 7th and 9th/Major/
+Contents/Resources/media/MIDI Chords/10 - A Major - F# minor/2 7th and 9th/Minor/
+Contents/Resources/media/MIDI Chords/10 - A Major - F# minor/3 All chords/
+Contents/Resources/media/MIDI Chords/10 - A Major - F# minor/4 Progression/
+Contents/Resources/media/MIDI Chords/10 - A Major - F# minor/4 Progression/Major/
+Contents/Resources/media/MIDI Chords/10 - A Major - F# minor/4 Progression/Major/alt4 style/
+Contents/Resources/media/MIDI Chords/10 - A Major - F# minor/4 Progression/Major/basic4 style/
+Contents/Resources/media/MIDI Chords/10 - A Major - F# minor/4 Progression/Major/hiphop style/
+Contents/Resources/media/MIDI Chords/10 - A Major - F# minor/4 Progression/Minor/
+Contents/Resources/media/MIDI Chords/10 - A Major - F# minor/4 Progression/Minor/alt4 style/
+Contents/Resources/media/MIDI Chords/10 - A Major - F# minor/4 Progression/Minor/basic4 style/
+Contents/Resources/media/MIDI Chords/10 - A Major - F# minor/4 Progression/Minor/hiphop style/
+Contents/Resources/media/MIDI Chords/11 - Bb Major - G minor/
+Contents/Resources/media/MIDI Chords/11 - Bb Major - G minor/1 Triad/
+Contents/Resources/media/MIDI Chords/11 - Bb Major - G minor/1 Triad/Major/
+Contents/Resources/media/MIDI Chords/11 - Bb Major - G minor/1 Triad/Minor/
+Contents/Resources/media/MIDI Chords/11 - Bb Major - G minor/2 7th and 9th/
+Contents/Resources/media/MIDI Chords/11 - Bb Major - G minor/2 7th and 9th/Major/
+Contents/Resources/media/MIDI Chords/11 - Bb Major - G minor/2 7th and 9th/Minor/
+Contents/Resources/media/MIDI Chords/11 - Bb Major - G minor/3 All chords/
+Contents/Resources/media/MIDI Chords/11 - Bb Major - G minor/4 Progression/
+Contents/Resources/media/MIDI Chords/11 - Bb Major - G minor/4 Progression/Major/
+Contents/Resources/media/MIDI Chords/11 - Bb Major - G minor/4 Progression/Major/alt4 style/
+Contents/Resources/media/MIDI Chords/11 - Bb Major - G minor/4 Progression/Major/basic4 style/
+Contents/Resources/media/MIDI Chords/11 - Bb Major - G minor/4 Progression/Major/hiphop style/
+Contents/Resources/media/MIDI Chords/11 - Bb Major - G minor/4 Progression/Minor/
+Contents/Resources/media/MIDI Chords/11 - Bb Major - G minor/4 Progression/Minor/alt4 style/
+Contents/Resources/media/MIDI Chords/11 - Bb Major - G minor/4 Progression/Minor/basic4 style/
+Contents/Resources/media/MIDI Chords/11 - Bb Major - G minor/4 Progression/Minor/hiphop style/
+Contents/Resources/media/MIDI Chords/12 - B Major - G# minor/
+Contents/Resources/media/MIDI Chords/12 - B Major - G# minor/1 Triad/
+Contents/Resources/media/MIDI Chords/12 - B Major - G# minor/1 Triad/Major/
+Contents/Resources/media/MIDI Chords/12 - B Major - G# minor/1 Triad/Minor/
+Contents/Resources/media/MIDI Chords/12 - B Major - G# minor/2 7th and 9th/
+Contents/Resources/media/MIDI Chords/12 - B Major - G# minor/2 7th and 9th/Major/
+Contents/Resources/media/MIDI Chords/12 - B Major - G# minor/2 7th and 9th/Minor/
+Contents/Resources/media/MIDI Chords/12 - B Major - G# minor/3 All chords/
+Contents/Resources/media/MIDI Chords/12 - B Major - G# minor/4 Progression/
+Contents/Resources/media/MIDI Chords/12 - B Major - G# minor/4 Progression/Major/
+Contents/Resources/media/MIDI Chords/12 - B Major - G# minor/4 Progression/Major/alt4 style/
+Contents/Resources/media/MIDI Chords/12 - B Major - G# minor/4 Progression/Major/basic4 style/
+Contents/Resources/media/MIDI Chords/12 - B Major - G# minor/4 Progression/Major/hiphop style/
+Contents/Resources/media/MIDI Chords/12 - B Major - G# minor/4 Progression/Minor/
+Contents/Resources/media/MIDI Chords/12 - B Major - G# minor/4 Progression/Minor/alt4 style/
+Contents/Resources/media/MIDI Chords/12 - B Major - G# minor/4 Progression/Minor/basic4 style/
+Contents/Resources/media/MIDI Chords/12 - B Major - G# minor/4 Progression/Minor/hiphop style/
+Contents/Resources/media/MIDI Progressions/
+Contents/Resources/media/MIDI Progressions/Major/
+Contents/Resources/media/MIDI Progressions/Major/alt4 style/
+Contents/Resources/media/MIDI Progressions/Major/basic4 style/
+Contents/Resources/media/MIDI Progressions/Major/hiphop style/
+Contents/Resources/media/MIDI Progressions/Minor/
+Contents/Resources/media/MIDI Progressions/Minor/alt4 style/
+Contents/Resources/media/MIDI Progressions/Minor/basic4 style/
+Contents/Resources/media/MIDI Progressions/Minor/hiphop style/
+Contents/Resources/midi_maps/
+Contents/Resources/osc/
+Contents/Resources/patchfiles/
+Contents/Resources/plugin_metadata/
+Contents/Resources/rdf/
+Contents/Resources/resources/
+Contents/Resources/scripts/
+Contents/Resources/templates/
+Contents/Resources/themes/
+Contents/Resources/web_surfaces/
+Contents/Resources/web_surfaces/builtin/
+Contents/Resources/web_surfaces/builtin/mixer/
+Contents/Resources/web_surfaces/builtin/mixer/ardour-toolkit-theme/
+Contents/Resources/web_surfaces/builtin/mixer/ardour-toolkit-theme/css/
+Contents/Resources/web_surfaces/builtin/mixer/ardour-toolkit-theme/images/
+Contents/Resources/web_surfaces/builtin/mixer/ardour-toolkit-theme/images/chart/
+Contents/Resources/web_surfaces/builtin/mixer/ardour-toolkit-theme/images/fader/
+Contents/Resources/web_surfaces/builtin/mixer/ardour-toolkit-theme/images/gradients/
+Contents/Resources/web_surfaces/builtin/mixer/ardour-toolkit-theme/images/knob/
+Contents/Resources/web_surfaces/builtin/mixer/ardour-toolkit-theme/images/meterbase/
+Contents/Resources/web_surfaces/builtin/mixer/ardour-toolkit-theme/images/select/
+Contents/Resources/web_surfaces/builtin/mixer/ardour-toolkit-theme/images/state/
+Contents/Resources/web_surfaces/builtin/mixer/ardour-toolkit-theme/images/window/
+Contents/Resources/web_surfaces/builtin/mixer/js/
+Contents/Resources/web_surfaces/builtin/mixer/toolkit/
+Contents/Resources/web_surfaces/builtin/mixer/toolkit/implements/
+Contents/Resources/web_surfaces/builtin/mixer/toolkit/modules/
+Contents/Resources/web_surfaces/builtin/mixer/toolkit/polyfill/
+Contents/Resources/web_surfaces/builtin/mixer/toolkit/styles/
+Contents/Resources/web_surfaces/builtin/mixer/toolkit/styles/fonts/
+Contents/Resources/web_surfaces/builtin/mixer/toolkit/widgets/
+Contents/Resources/web_surfaces/builtin/protocol/
+Contents/Resources/web_surfaces/builtin/transport/
+Contents/Resources/web_surfaces/builtin/transport/img/
+Contents/Resources/web_surfaces/index/
+Contents/Resources/web_surfaces/shared/
+Contents/Resources/web_surfaces/shared/base/
+Contents/Resources/web_surfaces/shared/components/
+Contents/_CodeSignature/
+Contents/_CodeSignature/CodeResources
+Contents/lib/
+Contents/lib/ardour9-lua
+Contents/lib/libFLAC.8.dylib
+Contents/lib/libarchive.13.dylib
+Contents/lib/libaubio.2.dylib
+Contents/lib/libcairo.2.dylib
+Contents/lib/libcairomm-1.0.1.dylib
+Contents/lib/libcurl.4.dylib
+Contents/lib/libffi.8.dylib
+Contents/lib/libfftw3.3.dylib
+Contents/lib/libfftw3f.3.dylib
+Contents/lib/libfftw3f_threads.3.dylib
+Contents/lib/libfontconfig.1.dylib
+Contents/lib/libfreetype.6.dylib
+Contents/lib/libfribidi.0.dylib
+Contents/lib/libgio-2.0.0.dylib
+Contents/lib/libgiomm-2.4.1.dylib
+Contents/lib/libglib-2.0.0.dylib
+Contents/lib/libglibmm-2.4.1.dylib
+Contents/lib/libgmodule-2.0.0.dylib
+Contents/lib/libgobject-2.0.0.dylib
+Contents/lib/libgthread-2.0.0.dylib
+Contents/lib/libharfbuzz.0.dylib
+Contents/lib/libiconv.2.dylib
+Contents/lib/libintl.8.dylib
+Contents/lib/liblilv-0.0.dylib
+Contents/lib/liblo.7.dylib
+Contents/lib/liblrdf.2.dylib
+Contents/lib/liblzma.5.dylib
+Contents/lib/libogg.0.dylib
+Contents/lib/libopus.0.dylib
+Contents/lib/libpango-1.0.0.dylib
+Contents/lib/libpangocairo-1.0.0.dylib
+Contents/lib/libpangoft2-1.0.0.dylib
+Contents/lib/libpangomm-1.4.1.dylib
+Contents/lib/libpixman-1.0.dylib
+Contents/lib/libpng16.16.dylib
+Contents/lib/libraptor2.0.dylib
+Contents/lib/libreadline.8.dylib
+Contents/lib/librubberband.2.dylib
+Contents/lib/libsamplerate.0.dylib
+Contents/lib/libserd-0.0.dylib
+Contents/lib/libsigc-2.0.0.dylib
+Contents/lib/libsndfile.1.dylib
+Contents/lib/libsord-0.0.dylib
+Contents/lib/libsratom-0.0.dylib
+Contents/lib/libtag.1.dylib
+Contents/lib/libusb-1.0.0.dylib
+Contents/lib/libuuid.16.dylib
+Contents/lib/libvamp-hostsdk.2.dylib
+Contents/lib/libvamp-sdk.2.dylib
+Contents/lib/libvorbis.0.dylib
+Contents/lib/libvorbisenc.2.dylib
+Contents/lib/libwebsockets.19.dylib
+Contents/lib/libxml2.2.dylib
+Contents/lib/libxslt.1.dylib
+Contents/lib/libz.1.dylib
+Contents/lib/LV2/
+Contents/lib/LV2/Harrison.lv2/
+Contents/lib/LV2/Harrison.lv2/res/
+Contents/lib/LV2/Harrison.lv2/res/chars/
+Contents/lib/LV2/Harrison.lv2/res/images/
+Contents/lib/LV2/a-comp.lv2/
+Contents/lib/LV2/a-delay.lv2/
+Contents/lib/LV2/a-eq.lv2/
+Contents/lib/LV2/a-exp.lv2/
+Contents/lib/LV2/a-fluidsynth.lv2/
+Contents/lib/LV2/a-reverb.lv2/
+Contents/lib/LV2/atom.lv2/
+Contents/lib/LV2/atom.lv2/atom.meta.ttl
+Contents/lib/LV2/atom.lv2/atom.ttl
+Contents/lib/LV2/atom.lv2/manifest.ttl
+Contents/lib/LV2/buf-size.lv2/
+Contents/lib/LV2/buf-size.lv2/buf-size.meta.ttl
+Contents/lib/LV2/buf-size.lv2/buf-size.ttl
+Contents/lib/LV2/buf-size.lv2/manifest.ttl
+Contents/lib/LV2/core.lv2/
+Contents/lib/LV2/core.lv2/lv2core.meta.ttl
+Contents/lib/LV2/core.lv2/lv2core.ttl
+Contents/lib/LV2/core.lv2/manifest.ttl
+Contents/lib/LV2/core.lv2/meta.ttl
+Contents/lib/LV2/core.lv2/people.ttl
+Contents/lib/LV2/data-access.lv2/
+Contents/lib/LV2/data-access.lv2/data-access.meta.ttl
+Contents/lib/LV2/data-access.lv2/data-access.ttl
+Contents/lib/LV2/data-access.lv2/manifest.ttl
+Contents/lib/LV2/dynmanifest.lv2/
+Contents/lib/LV2/dynmanifest.lv2/dynmanifest.meta.ttl
+Contents/lib/LV2/dynmanifest.lv2/dynmanifest.ttl
+Contents/lib/LV2/dynmanifest.lv2/manifest.ttl
+Contents/lib/LV2/event.lv2/
+Contents/lib/LV2/event.lv2/event.meta.ttl
+Contents/lib/LV2/event.lv2/event.ttl
+Contents/lib/LV2/event.lv2/manifest.ttl
+Contents/lib/LV2/gmsynth.lv2/
+Contents/lib/LV2/instance-access.lv2/
+Contents/lib/LV2/instance-access.lv2/instance-access.meta.ttl
+Contents/lib/LV2/instance-access.lv2/instance-access.ttl
+Contents/lib/LV2/instance-access.lv2/manifest.ttl
+Contents/lib/LV2/log.lv2/
+Contents/lib/LV2/log.lv2/log.meta.ttl
+Contents/lib/LV2/log.lv2/log.ttl
+Contents/lib/LV2/log.lv2/manifest.ttl
+Contents/lib/LV2/midi.lv2/
+Contents/lib/LV2/midi.lv2/manifest.ttl
+Contents/lib/LV2/midi.lv2/midi.meta.ttl
+Contents/lib/LV2/midi.lv2/midi.ttl
+Contents/lib/LV2/morph.lv2/
+Contents/lib/LV2/morph.lv2/manifest.ttl
+Contents/lib/LV2/morph.lv2/morph.meta.ttl
+Contents/lib/LV2/morph.lv2/morph.ttl
+Contents/lib/LV2/options.lv2/
+Contents/lib/LV2/options.lv2/manifest.ttl
+Contents/lib/LV2/options.lv2/options.meta.ttl
+Contents/lib/LV2/options.lv2/options.ttl
+Contents/lib/LV2/parameters.lv2/
+Contents/lib/LV2/parameters.lv2/manifest.ttl
+Contents/lib/LV2/parameters.lv2/parameters.meta.ttl
+Contents/lib/LV2/parameters.lv2/parameters.ttl
+Contents/lib/LV2/patch.lv2/
+Contents/lib/LV2/patch.lv2/manifest.ttl
+Contents/lib/LV2/patch.lv2/patch.meta.ttl
+Contents/lib/LV2/patch.lv2/patch.ttl
+Contents/lib/LV2/port-groups.lv2/
+Contents/lib/LV2/port-groups.lv2/manifest.ttl
+Contents/lib/LV2/port-groups.lv2/port-groups.meta.ttl
+Contents/lib/LV2/port-groups.lv2/port-groups.ttl
+Contents/lib/LV2/port-props.lv2/
+Contents/lib/LV2/port-props.lv2/manifest.ttl
+Contents/lib/LV2/port-props.lv2/port-props.meta.ttl
+Contents/lib/LV2/port-props.lv2/port-props.ttl
+Contents/lib/LV2/presets.lv2/
+Contents/lib/LV2/presets.lv2/manifest.ttl
+Contents/lib/LV2/presets.lv2/presets.meta.ttl
+Contents/lib/LV2/presets.lv2/presets.ttl
+Contents/lib/LV2/reasonablesynth.lv2/
+Contents/lib/LV2/resize-port.lv2/
+Contents/lib/LV2/resize-port.lv2/manifest.ttl
+Contents/lib/LV2/resize-port.lv2/resize-port.meta.ttl
+Contents/lib/LV2/resize-port.lv2/resize-port.ttl
+Contents/lib/LV2/schemas.lv2/
+Contents/lib/LV2/schemas.lv2/dcs.ttl
+Contents/lib/LV2/schemas.lv2/dct.ttl
+Contents/lib/LV2/schemas.lv2/doap.ttl
+Contents/lib/LV2/schemas.lv2/foaf.ttl
+Contents/lib/LV2/schemas.lv2/manifest.ttl
+Contents/lib/LV2/schemas.lv2/owl.ttl
+Contents/lib/LV2/schemas.lv2/rdf.ttl
+Contents/lib/LV2/schemas.lv2/rdfs.ttl
+Contents/lib/LV2/schemas.lv2/xsd.ttl
+Contents/lib/LV2/state.lv2/
+Contents/lib/LV2/state.lv2/manifest.ttl
+Contents/lib/LV2/state.lv2/state.meta.ttl
+Contents/lib/LV2/state.lv2/state.ttl
+Contents/lib/LV2/time.lv2/
+Contents/lib/LV2/time.lv2/manifest.ttl
+Contents/lib/LV2/time.lv2/time.meta.ttl
+Contents/lib/LV2/time.lv2/time.ttl
+Contents/lib/LV2/ui.lv2/
+Contents/lib/LV2/ui.lv2/manifest.ttl
+Contents/lib/LV2/ui.lv2/ui.meta.ttl
+Contents/lib/LV2/ui.lv2/ui.ttl
+Contents/lib/LV2/units.lv2/
+Contents/lib/LV2/units.lv2/manifest.ttl
+Contents/lib/LV2/units.lv2/units.meta.ttl
+Contents/lib/LV2/units.lv2/units.ttl
+Contents/lib/LV2/uri-map.lv2/
+Contents/lib/LV2/uri-map.lv2/manifest.ttl
+Contents/lib/LV2/uri-map.lv2/uri-map.meta.ttl
+Contents/lib/LV2/uri-map.lv2/uri-map.ttl
+Contents/lib/LV2/urid.lv2/
+Contents/lib/LV2/urid.lv2/manifest.ttl
+Contents/lib/LV2/urid.lv2/urid.meta.ttl
+Contents/lib/LV2/urid.lv2/urid.ttl
+Contents/lib/LV2/worker.lv2/
+Contents/lib/LV2/worker.lv2/manifest.ttl
+Contents/lib/LV2/worker.lv2/worker.meta.ttl
+Contents/lib/LV2/worker.lv2/worker.ttl
+Contents/lib/backends/
+Contents/lib/gtkengines/
+Contents/lib/gtkengines/engines/
+Contents/lib/harvid/
+Contents/lib/panners/
+Contents/lib/surfaces/
+sent 2143610 bytes  received 4424 bytes  24108125 bytes/sec
+total size is 228216053  speedup is 106.24
