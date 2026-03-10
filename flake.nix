@@ -111,6 +111,7 @@
           nativeBuildInputs = with pkgs; [
             pkg-config
             python311
+            gtk2 # i18nのリソースだけが必要(ytkにはリソースが入っていないしビルドもされないらしい)
           ];
           buildInputs = libraries;
           # This is needed for the build system to find sratom's headers and libraries
